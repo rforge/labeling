@@ -36,7 +36,7 @@
 #' y <- iris$Sepal.Length
 #' xl <- extended(min(x), max(x), 6)
 #' yl <- extended(min(y), max(y), 6)
-#' plot(x, y, xlim=c(min(x,xl),max(x,xl)), ylim=c(min(y,yl),max(y,yl)), axes=FALSE, title="Extended labeling")
+#' plot(x, y, xlim=c(min(x,xl),max(x,xl)), ylim=c(min(y,yl),max(y,yl)), axes=FALSE, main="Extended labeling")
 #' axis(1, at=xl)
 #' axis(2, at=yl)
 c()
