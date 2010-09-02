@@ -1,0 +1,11 @@
+Package: labeling
+Type: Package
+Title: Axis Labeling
+Version: 0.1
+Date: 2010-09-02
+Author: Justin Talbot
+Maintainer: Justin Talbot <jtalbot@stanford.edu>
+Description: Provides a range of axis labeling algorithms
+License: Unlimited
+LazyLoad: no
+Collate: 'labeling.R'
