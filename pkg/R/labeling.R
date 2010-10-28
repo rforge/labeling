@@ -179,12 +179,6 @@ wilkinson <-function(dmin, dmax, m, Q = c(1,5,2,2.5,3,4,1.5,7,6,8,9), mincoverag
 
 ## The Extended-Wilkinson algorithm described in the paper.
 
-## helper--define a mod function that works sensibly on non-integers
-.floored.mod <- function(a, n)			
-{
-	a - n*floor(a/n)
-}
-
 ## Our scoring functions, including the approximations for limiting the search
 .simplicity <- function(q, Q, j, lmin, lmax, lstep)
 {
@@ -192,7 +186,7 @@ wilkinson <-function(dmin, dmax, m, Q = c(1,5,2,2.5,3,4,1.5,7,6,8,9), mincoverag
 
 	n <- length(Q)
 	i <- match(q, Q)[1]
-	v <- ifelse( .floored.mod(lmin, lstep) < eps && lmin <= 0 && lmax >=0, 1, 0)
+	v <- ifelse( (lmin %% lstep < eps || lstep - (lmin %% lstep) < eps) && lmin <= 0 && lmax >=0, 1, 0)
 
 	1 - (i-1)/(n-1) - j + v
 }
