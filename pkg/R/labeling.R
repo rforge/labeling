@@ -182,7 +182,7 @@ wilkinson <-function(dmin, dmax, m, Q = c(1,5,2,2.5,3,4,1.5,7,6,8,9), mincoverag
 ## Our scoring functions, including the approximations for limiting the search
 .simplicity <- function(q, Q, j, lmin, lmax, lstep)
 {
-	eps <- 1e-10
+	eps <- .Machine$double.eps * 100
 
 	n <- length(Q)
 	i <- match(q, Q)[1]
@@ -257,6 +257,20 @@ wilkinson <-function(dmin, dmax, m, Q = c(1,5,2,2.5,3,4,1.5,7,6,8,9), mincoverag
 #' @author Justin Talbot \email{jtalbot@@stanford.edu}
 extended <- function(dmin, dmax, m, Q=c(1,5,2,2.5,4,3), only.loose=FALSE, w=c(0.25,0.2,0.5,0.05))
 {
+	eps <- .Machine$double.eps * 100
+	
+	if(dmin > dmax) {
+		temp <- dmin
+		dmin <- dmax
+		dmax <- temp
+	}
+
+	if(dmax - dmin < eps) {
+		#if the range is near the floating point limit,
+		#let seq generate some equally spaced steps.
+		return(seq(from=dmin, to=dmax, length.out=m))
+	}
+
 	n <- length(Q)
 
 	best <- list()
