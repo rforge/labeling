@@ -9,3 +9,4 @@ Description: Provides a range of axis labeling algorithms
 License: Unlimited
 LazyLoad: no
 Collate: 'labeling.R'
+
