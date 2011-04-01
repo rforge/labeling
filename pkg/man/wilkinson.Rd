@@ -1,8 +1,9 @@
 \name{wilkinson}
 \alias{wilkinson}
 \title{Wilkinson's labeling algorithm...}
-\usage{wilkinson(dmin, dmax, m, Q=c(1, 5, 2, 2.5, 3, 4, 1.5, 7, 6, 8, 9),
-    mincoverage=0.8, mrange=max(floor(m/2), 2):ceiling(6 * m))}
+\usage{wilkinson(dmin, dmax, m, Q=c(1, 5, 2, 2.5, 3, 4, 1.5, 7, 6, 8,
+    9), mincoverage=0.8, mrange=max(floor(m/2), 2):ceiling(6 *
+    m))}
 \description{Wilkinson's labeling algorithm}
 \value{vector of axis label locations}
 \note{Ported from Wilkinson's Java implementation with some changes.

@@ -4,8 +4,8 @@
 \details{\tabular{ll}{
 Package: \tab labeling\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2010-09-01\cr
+Version: \tab 0.2\cr
+Date: \tab 2011-04-01\cr
 License: \tab Unlimited\cr
 LazyLoad: \tab yes\cr
 }

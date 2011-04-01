@@ -1,8 +1,9 @@
 \name{rpretty}
 \alias{rpretty}
 \title{R's pretty algorithm implemented in R...}
-\usage{rpretty(dmin, dmax, m=6, n=floor(m) - 1, min.n=n\%/\%3, shrink.sml=0.75,
-    high.u.bias=1.5, u5.bias=0.5 + 1.5 * high.u.bias)}
+\usage{rpretty(dmin, dmax, m=6, n=floor(m) - 1, min.n=n%/%3,
+    shrink.sml=0.75, high.u.bias=1.5, u5.bias=0.5 + 1.5 *
+    high.u.bias)}
 \description{R's pretty algorithm implemented in R}
 \value{vector of axis label locations}
 \references{Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988) \emph{The New S Language}. Wadsworth & Brooks/Cole.}

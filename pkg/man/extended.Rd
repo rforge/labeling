@@ -1,8 +1,8 @@
 \name{extended}
 \alias{extended}
 \title{An Extension of Wilkinson's Algorithm for Position Tick Labels on Axes...}
-\usage{extended(dmin, dmax, m, Q=c(1, 5, 2, 2.5, 4, 3), only.loose=FALSE, w=c(0.25,
-    0.2, 0.5, 0.05))}
+\usage{extended(dmin, dmax, m, Q=c(1, 5, 2, 2.5, 4, 3),
+    only.loose=FALSE, w=c(0.25, 0.2, 0.5, 0.05))}
 \description{An Extension of Wilkinson's Algorithm for Position Tick Labels on Axes}
 \details{\code{extended} is an enhanced version of Wilkinson's optimization-based axis labeling approach. It is described in detail in our paper. See the references.}
 \value{vector of axis label locations}
